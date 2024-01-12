@@ -1,315 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><!-- Basic -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:wght@600&family=Roboto+Condensed&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-  }
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Love Cafe</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  header {
-    background-image: url('images/cafe\ \(2\).jpg'); /* Replace 'your-background-image.jpg' with your actual image path */
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 400px 0;
-  }
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-  section {
-    text-align: center;
-    padding: 120px 0;
-  }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="gal-css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="gal-css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="gal-css/responsive.css">
+    <link rel="stylesheet" href="css/careers.css">
 
-  section:nth-child(odd) {
-    background-color: #000000;
-  }
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .career-title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
-  .opening-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fffdfd;
-  }
-  
-  .opening-tits {
-    font-size: 36px;
-    font-weight: bold;
-    color: #000000;
-    margin-top: -100px;
-  }
-  .dot-list {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-}
-
-.dot-item {
-  display: flex;
-  align-items: center;
-  margin: 15px;
-}
-
-.dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #333;
-  margin-right: 15px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #000;
-  border: 1px solid #000;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  margin: 10px; /* Add margin for spacing between buttons */
-}
-
-  .why-join {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #ffffff;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  h1 {
-    text-align: center;
-    font-size: 37px;
-    margin-top: -80px;
-    font-weight: bold;
-  }
-  .sec2 {
-    padding: 100px 0;
-  }
-
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000; /* Change text color */
-    border: 1px solid #000; /* Change border color */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  .button:hover {
-    background-color: blue; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
-  }
-/* Navbar styling */
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px;
-  margin-right: 50px;
-  z-index: 2; /* Set a higher z-index */
-}
-
-.navbar-toggle {
-  display: none;
-  z-index: 3; /* Set an even higher z-index */
-}
-
-.main-nav {
-  list-style-type: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  position: relative; /* Ensure it stays above the background */
-  z-index: 1; /* Set a high z-index to stay above the background */
-}
-
-.main-nav li {
-  margin: 0 10px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #d6c7c7;
-  margin: 15px;
-  margin-top: 20px;
-  font-size: 30px;
-  font-family: 'Kanit', sans-serif;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.main-nav a:hover {
-  background-color: #000;
-  border: #000 solid 7px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 750px) {
-  .navbar-toggle {
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-}
-
-/* Rotate the button when active */
-.navbar-toggle.active {
-  transform: rotate(45deg);
-}
-
-
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    text-align: right;
-    width: 100%;
-    position: absolute;
-    background-color: #f9f9f9;
-    top: 60px;
-    right: 0;
-    z-index: 2; /* Set a higher z-index */
-  }
-
-  .main-nav.active {
-    display: flex;
-  }
-
-  .main-nav li {
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  /* Other existing styles... */
-
-  .navbar-toggle {
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-}
-
-/* Rotate the button when active */
-.navbar-toggle.active {
-  transform: rotate(45deg);
-}
-
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    text-align: right;
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    background-color: #000;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    padding-top: 80px; /* Add some padding to move the links down */
-  }
-
-  .main-nav.active {
-    display: flex;
-    margin-right: 5px;
-    padding-right: 20px;
-  }
-
-  .main-nav li {
-    margin: 20px 30px;
-    cursor: pointer;
-    margin-right: 20px;
-    
-  }
-
-  .main-nav a {
-    font-size: 20px; /* Adjust the font size */
-    margin-right: 50px;
-  }
-  .main-nav a:hover {
-    font-size: 30px; /* Adjust the font size */
-    color: white;
-  }
-}
-
-/* Additional styles for spacing on larger screens */
-@media screen and (min-width: 771px) {
-  .main-nav {
-    padding-top: 0; /* Reset padding for larger screens */
-  }
-}
-.logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 400px; /* Adjust the width as needed */
-      height: auto; /* Maintain aspect ratio */
-      margin-top: 40px;
-    }
-
-</style>
-  <title>Career Page</title>
 </head>
+
 <body>
-
-  <header>
-    <a href="images/"><img class="logo" src="images/logo.png" alt="Logo"></a>
-    <nav class="navbar">
-      <div class="navbar-toggle" id="js-navbar-toggle">
-        <svg class="icon" viewBox="0 0 24 24" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18"></path>
-        </svg>
-        
-      </div>
-      </div>
-      <ul class="main-nav" id="js-menu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="menu.html">MENU</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li>
-          <a href="gallery.html">GALLERY</a>
-      </li>
-      </ul>
-    </nav>
-    <div class="career-title">Careers</div>
-  </header>
-  
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img class="logo" src="images/logo.png" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+          
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+						<li class="nav-item"><a class="nav-link" href="menu.html">MENU</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+						<li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
       
+	<section>
 
-  <section>
-    <div class="opening-tits">Current Job Openings</div>
-    <ul class="dot-list">
-      <li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Barista</a> </li>
-      <li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Waiter</a></li>
-      <li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Chef de Partie</a></li>
-      <li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Marketing Coordinator</a></li>
-    </ul>
-  </section>
+		<div id="openingSection" class="opening-tits">Current Job Openings</div>
+		<ul class="dot-list">
+			<li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Barista</a></li>
+			<li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Waiter</a></li>
+			<li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Chef de Partie</a></li>
+			<li class="dot-item"><span class="dot"></span><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc6SWroOSXXDaOHetcFhDfjCv-IULyyFd2IVkOccTccdSsDGQ/viewform?usp=sf_link">Marketing Coordinator</a></li>
+		</ul>
+	</section>
+	
 
   <section class="sec2">
     <div class="opening-title"><h1>Why Join Us?</h1></div>
@@ -318,22 +75,100 @@
     </p>
   </section>
 
-  <footer>
-    &copy; 2024 Love Cafe. All rights reserved.
-  </footer>
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Opening hours</h3>
+					<p><span class="text-color">Monday: </span>Closed</p>
+					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
+					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
+					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					<p class="lead">Ipsum Street, Lorem Tower, MO, Columbia, 508000</p>
+					<p class="lead"><a href="#">+01 2000 800 9999</a></p>
+					<p><a href="#"> info@admin.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Links</h3>
+					<div class="links">
+						<a class="link" href="menu.html">MENU</a>
+						<a class="link" href="about.html">ABOUT</a>
+						<a class="link" href="contact.html">CONTACT</a>
+						<a class="link" href="gallery.html">GALLERY</a>
+					</div>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">All Rights Reserved. &copy; 2018 <a href="#">Love Cafe</a> Design By Aayush</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<!-- End Footer -->
 
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var navbarToggle = document.getElementById('js-navbar-toggle');
-  var mainNav = document.getElementById('js-menu');
+	<!-- ALL JS FILES -->
+	<script src="js/js/jquery-3.2.1.min.js"></script>
+	<script src="js/js/popper.min.js"></script>
+	<script src="js/js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="js/jquery.superslides.min.js"></script>
+	<script src="js/images-loded.min.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/baguetteBox.min.js"></script>
+	<script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+    
+      	
 
-  navbarToggle.addEventListener('click', function () {
-    mainNav.classList.toggle('active');
-    navbarToggle.classList.toggle('active'); // Toggle the active class on the button
-  });
-});
-
-  </script>
+    
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  var navbarToggle = document.getElementById('js-navbar-toggle');
+		  var mainNav = document.getElementById('js-menu');
+		  var openingSection = document.getElementById('openingSection');
+		
+		  navbarToggle.addEventListener('click', function () {
+			mainNav.classList.toggle('active');
+			navbarToggle.classList.toggle('active'); // Toggle the active class on the button
+		
+			// Add or remove a class to adjust the positioning of the opening section
+			openingSection.classList.toggle('shift-down');
+		  });
+		});
+		
+		$('#slides').superslides({
+			inherit_width_from: '.cover-slides',
+			inherit_height_from: '.cover-slides',
+			play: 5000,
+			animation: 'fade',
+		});
+		
+		$( ".cover-slides ul li" ).append( "<div class='overlay-background'></div>" );
+		</script>
+		
   
 
 </body>

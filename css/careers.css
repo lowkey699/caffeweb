@@ -1,168 +1,271 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-  }
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 
-  header {
-    background-image: url('https://cambercoffee.com/wp-content/uploads/2022/11/Camber_FlagshipCafe_Cover.jpg'); /* Replace 'your-background-image.jpg' with your actual image path */
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 400px 0;
-  }
+header {
+  background-image: url('images/cafe\ \(2\).jpg'); /* Replace 'your-background-image.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+}
 
-  section {
-    text-align: center;
-    padding: 120px 0;
-  }
+section {
+  text-align: center;
+  padding: 120px 0;
 
-  section:nth-child(odd) {
-    background-color: #000000;
-  }
+}
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
+section:nth-child(odd) {
+  background-color: #000000;
+}
 
-  .career-title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
 
-  .opening-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fffdfd;
-  }
-  
-  .opening-tits {
-    font-size: 36px;
-    font-weight: bold;
-    color: #000000;
-    margin-top: -100px;
-  }
+.career-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-  .dot-list {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
-  }
+.opening-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fffdfd;
+}
 
-  .dot-item {
-    display: flex;
-    align-items: center;
-    margin: 15px 0;
-  }
+.opening-tits {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: -100px;
+}
+.dot-list {
+list-style: none;
+padding: 0;
+margin: 30px 0;
+display: flex;
+flex-wrap: wrap; /* Allow items to wrap to the next line */
+justify-content: center; /* Center items horizontally */
+align-items: center; /* Center items vertically */
+}
 
-  .dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #333;
-    margin-right: 15px;
-  }
+.dot-item {
+display: flex;
+align-items: center;
+margin: 15px;
+}
 
-  .why-join {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #ffffff;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  h1 {
-    text-align: center;
-    font-size: 37px;
-    margin-top: -80px;
-    font-weight: bold;
-  }
-  .sec2 {
-    padding: 100px 0;
-  }
+.dot {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: #333;
+margin-right: 15px;
+}
 
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000; /* Change text color */
-    border: 1px solid #000; /* Change border color */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  .button:hover {
-    background-color: blue; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
-  }
-  /* Navbar styling */
+.button {
+display: inline-block;
+padding: 10px 20px;
+text-decoration: none;
+color: #000;
+border: 1px solid #000;
+transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+margin: 10px; /* Add margin for spacing between buttons */
+}
+
+.why-join {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  font-size: 37px;
+  margin-top: -80px;
+  font-weight: bold;
+  color: white;
+}
+.sec2 {
+  padding: 100px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000; /* Change text color */
+  border: 1px solid #000; /* Change border color */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: blue; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+/* Navbar styling */
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 20px;
+position: absolute;
+top: 0;
+right: 0;
+
+
+z-index: 2; /* Set a higher z-index */
+}
+
+.navbar-toggle {
+display: none;
+z-index: 3; /* Set an even higher z-index */
+}
+
+.main-nav {
+list-style-type: none;
+display: flex;
+margin: 0;
+padding: 0;
+position: relative; /* Ensure it stays above the background */
+z-index: 1; /* Set a high z-index to stay above the background */
+}
+
+.main-nav li {
+margin: 0 10px;
+}
+
+.main-nav a {
+text-decoration: none;
+color: #d6c7c7;
+margin: 15px;
+margin-top: 20px;
+font-size: 30px;
+font-family: 'Kanit', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main-nav a:hover {
+background-color: #000;
+border: #000 solid 7px;
+cursor: pointer;
+color: white;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 750px) {
+.navbar-toggle {
+display: block;
+cursor: pointer;
+transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Rotate the button when active */
+.navbar-toggle.active {
+transform: rotate(45deg);
+}
+
+
+.main-nav {
+  display: none;
+  flex-direction: column;
+  text-align: right;
+  width: 100%;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 60px;
+  right: 0;
+  z-index: 2; /* Set a higher z-index */
+}
+
+.main-nav.active {
+  display: flex;
+}
+
+.main-nav li {
+  margin: 10px;
+}
+}
+
+@media screen and (max-width: 770px) {
+
+
+
+.navbar-toggle {
+display: block;
+cursor: pointer;
+transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Rotate the button when active */
+.navbar-toggle.active {
+transform: rotate(45deg);
+}
+
+.main-nav {
+  display: none;
+  flex-direction: column;
+  text-align: right;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding-top: 80px; /* Add some padding to move the links down */
+}
+
+.main-nav.active {
+  display: flex;
+  margin-right: -5px;
+  padding-right: 60px;
+}
+
+.main-nav li {
+  margin: 20px 30px;
+  cursor: pointer;
+  margin-right: 20px;
+  
+}
+
+.main-nav a {
+  font-size: 20px; /* Adjust the font size */
+  margin-right: 50px;
+}
+.main-nav a:hover {
+  font-size: 30px; /* Adjust the font size */
+  color: white;
+}
+}
+
+/* Additional styles for spacing on larger screens */
+@media screen and (min-width: 771px) {
+.main-nav {
+  padding-top: 0; /* Reset padding for larger screens */
+}
+}
+.logo {
     position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    margin-right: 50px;
+    top: 10px;
+    left: 0;
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+
+  }
+  .navbar-toggler{
+    margin-top: 30px;
   }
   
-  .navbar-toggle {
-    display: none;
-  }
-  
-  .main-nav {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main-nav li {
-    margin: 0 10px;
-  }
-  
-  .main-nav a {
-    text-decoration: none;
-    color: #ffff;
-    margin: 15px;
-    font-size: 25px;
-  }
-  .main-nav a:hover{
-    background-color: #000;
-    border: #000 solid 7px;
-    cursor: pointer;
-  }
-  
-  /* Media queries for responsiveness */
-  @media screen and (max-width: 750px) {
-    .navbar-toggle {
-      display: block;
-      cursor: pointer;
-    }
-  
-    .main-nav {
-      display: none;
-      flex-direction: column;
-      text-align: right;
-      width: 100%;
-      position: absolute;
-      background-color: #f9f9f9;
-      top: 60px;
-      right: 0;
-      z-index: 1; /* Ensure the menu overlaps other content */
-    }
-  
-    .main-nav.active {
-      display: flex;
-    }
-  
-    .main-nav li {
-      margin: 10px;
-    }
-  }

@@ -1,0 +1,199 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+header {
+background-color: darkcyan;
+color: white;
+text-align: left; /* Align the text to the left */
+padding: 20px;
+display: flex; /* Use flexbox to align items horizontally */
+justify-content: space-between; /* Space elements evenly */
+align-items: center; /* Center items vertically */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: 400px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+   /* Navbar styling */
+.navbar {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 20px;
+position: absolute;
+top: 0;
+right: 0;
+margin: 10px;
+margin-right: 50px;
+z-index: 2; /* Set a higher z-index */
+}
+
+.navbar-toggle {
+display: none;
+z-index: 3; /* Set an even higher z-index */
+}
+
+.main-nav {
+list-style-type: none;
+display: flex;
+margin: 0;
+padding: 0;
+position: relative; /* Ensure it stays above the background */
+z-index: 1; /* Set a high z-index to stay above the background */
+
+}
+
+.main-nav li {
+margin: 0 10px;
+}
+
+.main-nav a {
+text-decoration: none;
+color:white;
+margin: 15px;
+font-size: 20px;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main-nav a:hover {
+background-color: #000;
+border: #000 solid 7px;
+cursor: pointer;
+color: white;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 950px) {
+.navbar-toggle {
+display: block;
+cursor: pointer;
+transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Rotate the button when active */
+.navbar-toggle.active {
+transform: rotate(45deg);
+}
+
+
+
+.main-nav {
+    display: none;
+    flex-direction: column;
+    text-align: right;
+    width: 20%;
+  
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 80px; /* Add some padding to move the links down */
+    }
+.main-nav.active {
+display: flex;
+}
+
+.main-nav li {
+margin: 10px;
+}
+}
+
+@media screen and (max-width: 770px) {
+/* Other existing styles... */
+
+.navbar-toggle {
+display: block;
+cursor: pointer;
+transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Rotate the button when active */
+.navbar-toggle.active {
+transform: rotate(45deg);
+}
+
+.main-nav {
+display: none;
+flex-direction: column;
+text-align: right;
+width: 20%;
+height: 100%;
+position: fixed;
+background-color: #000;
+top: 0;
+right: 0;
+z-index: 1;
+padding-top: 80px; /* Add some padding to move the links down */
+}
+
+.main-nav.active {
+display: flex;
+padding-right: 30px;
+}
+
+.main-nav li {
+margin: 20px 30px;
+cursor: pointer;
+
+}
+
+.main-nav a {
+font-size: 20px; /* Adjust the font size */
+}
+.main-nav a:hover {
+font-size: 30px; /* Adjust the font size */
+color: white;
+}
+}
+
+@media screen and (max-width: 470px) {
+.main-nav.active {
+display: flex;
+padding-right: 80px;
+}
+}
+h1{
+    font-size: 100px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
